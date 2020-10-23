@@ -40,7 +40,6 @@ public class CovidDataService {
         int latestCases, prevDayCases;
         for (CSVRecord record : records) {
             Stats stat = new Stats();
-            stat.setState(record.get("Province/State"));
             stat.setCountry(record.get("Country/Region"));
             latestCases = Integer.parseInt(record.get(record.size() - 1));
             prevDayCases = Integer.parseInt(record.get(record.size() - 2));
